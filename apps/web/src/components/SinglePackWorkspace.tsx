@@ -270,21 +270,25 @@ export default function SinglePackWorkspace({
         </label>
       </div>
 
-      <h3 style={{ marginTop: 16 }}>Create from Template</h3>
-      <div className="grid">
-        {PACK_TEMPLATES.map(template => (
-          <button
-            key={template.id}
-            type="button"
-            disabled={busy}
-            onClick={() => createFromTemplate(template.id)}
-            style={{ textAlign: 'left', padding: 12 }}
-          >
-            <div style={{ fontWeight: 'bold' }}>{template.name}</div>
-            <div style={{ fontSize: '0.85em', opacity: 0.8, marginTop: 4 }}>{template.description}</div>
-          </button>
-        ))}
-      </div>
+      {PACK_TEMPLATES.length > 0 && (
+        <>
+          <h3 style={{ marginTop: 16 }}>Create from Template</h3>
+          <div className="grid">
+            {PACK_TEMPLATES.map(template => (
+              <button
+                key={template.id}
+                type="button"
+                disabled={busy}
+                onClick={() => createFromTemplate(template.id)}
+                style={{ textAlign: 'left', padding: 12 }}
+              >
+                <div style={{ fontWeight: 'bold' }}>{template.name}</div>
+                <div style={{ fontSize: '0.85em', opacity: 0.8, marginTop: 4 }}>{template.description}</div>
+              </button>
+            ))}
+          </div>
+        </>
+      )}
 
       <div className="row" style={{ gap: 8, marginTop: 12, alignItems: 'center' }}>
         <label style={{ flexDirection: 'row', gap: 8, alignItems: 'center' }}>

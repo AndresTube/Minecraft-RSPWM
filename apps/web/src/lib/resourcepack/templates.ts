@@ -1,4 +1,3 @@
-import type { ResourcePack } from './types'
 // Templates have been removed. Export minimal stubs so callers don't break.
 export type PackTemplate = { id: string; name: string; description: string }
 
@@ -11,4 +10,4 @@ export function getTemplate(_id: string): PackTemplate | null {
 export function createPackFromTemplate(_templateId: string, _settings: unknown): never {
   throw new Error('Pack templates feature has been removed')
 }
-    id: 'empty',
+
