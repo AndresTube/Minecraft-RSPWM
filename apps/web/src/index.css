@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  /* Minecraft color palette */
+  --mc-bg: #3C3C3C;
+  --mc-dirt: #9F8050;
+  --mc-stone: #7F7F7F;
+  --mc-panel: #212121;
+  --mc-border: #5F5F5F;
+  --mc-border-strong: #8F8F8F;
+  --mc-text: #FCFCFC;
+  --mc-text-shadow: #3F3F3F;
+  --mc-muted: #AAAAAA;
+  --mc-accent: #55FF55; /* Minecraft green */
+  --mc-accent-dark: #00AA00;
+  --mc-button: #8B8B8B;
+  --mc-button-hover: #ABABAB;
+  --mc-button-active: #5B5B5B;
+
+  /* Minecraftia font for body text */
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  line-height: 1.8;
+  font-weight: 400;
+  font-size: 10px;
+
+  color: var(--mc-text);
+  background-color: var(--mc-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Dirt block background */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--mc-bg);
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.1) 2px,
+      rgba(0, 0, 0, 0.1) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.1) 2px,
+      rgba(0, 0, 0, 0.1) 4px
+    );
+}
+
+a {
+  font-weight: 400;
+  color: #5555FF;
+  text-decoration: underline;
+}
+a:hover {
+  color: #5F5FFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 3px 3px 0 var(--mc-text-shadow);
+  color: var(--mc-text);
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 14px;
+}
+
+h3 {
+  font-size: 11px;
+}
+
+code {
+  color: #FFFF55;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2px 4px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+}
+
+button {
+  border: none;
+  padding: 8px 16px;
+  font-size: 10px;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  letter-spacing: 0;
+  background: var(--mc-button);
+  color: var(--mc-text);
+  cursor: pointer;
+  box-shadow:
+    inset -2px -4px 0 rgba(0, 0, 0, 0.3),
+    inset 2px 2px 0 rgba(255, 255, 255, 0.3);
+  transition: none;
+  image-rendering: pixelated;
+}
+
+button:hover:not(:disabled) {
+  background: var(--mc-button-hover);
+}
+
+button:active:not(:disabled) {
+  background: var(--mc-button-active);
+  box-shadow:
+    inset 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Accent buttons */
+button.primary {
+  background: var(--mc-accent);
+  color: #000000;
+  text-shadow: none;
+}
+
+button.primary:hover:not(:disabled) {
+  background: #7FFF7F;
+}
+
+button.primary:active:not(:disabled) {
+  background: var(--mc-accent-dark);
+}

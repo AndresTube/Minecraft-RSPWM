@@ -1,0 +1,101 @@
+#root {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tabs button.active {
+  background: var(--mc-accent);
+  color: #000000;
+  box-shadow:
+    inset 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.panel {
+  border: none;
+  padding: 16px;
+  background: var(--mc-panel);
+  box-shadow:
+    inset -3px -3px 0 rgba(0, 0, 0, 0.5),
+    inset 3px 3px 0 rgba(255, 255, 255, 0.2),
+    0 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+input,
+select,
+textarea {
+  padding: 8px 12px;
+  border: none;
+  background: #000000;
+  color: var(--mc-text);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  box-shadow:
+    inset 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--mc-accent);
+  outline-offset: 0;
+}
+
+textarea {
+  line-height: 1.6;
+}
+
+.glyphPreview {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  min-height: 80px;
+  padding: 12px;
+  border-radius: 2px;
+  border: 2px dashed var(--mc-border-strong);
+  background: rgba(0, 0, 0, 0.35);
+  font-size: 48px;
+}
+
