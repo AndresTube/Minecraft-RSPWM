@@ -27,3 +27,6 @@ coverage/
 
 # Vite
 *.local
+
+# Local Netlify folder
+.netlify
